@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# based on https://pastebin.com/2zi0SgfT and https://docs.python.org/2/library/simplehttpserver.html
+
+import webkit, gtk, sys
+
+option = sys.argv[1]
+source = "http://localhost:8000/"
+
+win = gtk.Window()
+win.fullscreen()
+
+web = webkit.WebView()
+
+if option == '--login':
+ web.open(source + "login.html")
+ 
+elif option == '--logoff':
+ web.open(source + "logoff.html")
+ 
+elif option == '--menu':
+ web.open(source + "index.html")  
+win.add(web)
+win.show_all()
+
+gtk.main()

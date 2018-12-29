@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>lightd Control Center</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="base/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="base/css/AdminLTE.min.css">
+
+  <link rel="stylesheet" href="base/css/_all-skins.min.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="base/css/lightd_custom.css">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue">
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="row">
+        <!-- lightd logo -->
+        <div class="col-sm-3">
+          <!-- Navbar Brand [with text]-->
+            <a href="#" class="navbar-brand">
+                lightd <small> Control Center</small>
+            </a>
+        </div>
+        <!-- lightd search -->
+        <div class="col-sm-6" style="padding-top: 010px;">
+          <div class="input-group input-group-sm">
+                <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-info btn-flat">Go!</button>
+                    </span>
+              </div>
+        </div>
+        <!-- lightd shortcuts -->
+        <div class="col-sm-3">
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- menu-->
+                <li>
+                  <a href="#" data-toggle="control-sidebar"><i class="fa fa-bars"></i></a>
+                </li>
+              <!-- Calendar-->
+              <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-calendar"></i>
+                  <span class="label label-success">4</span>
+                </a>
+
+              </li>
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+              </li>
+              <!-- sign-out:  -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-sign-out"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <ul class="list-unstyled category-content">
+                      <li>
+                        <a href="#">
+                          <i class="fa  fa-power-off exit-padding"></i> Power-off
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-repeat exit-padding"></i> Reset
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-toggle-off exit-padding"></i> Suspend
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-lock exit-padding"></i> Lock
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-user exit-padding"></i> Change user
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa   fa-sign-out exit-padding"></i> Exit
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </nav>
+  </header>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+          <!-- need to fix category title) -->
+      </h1>
+      <i class="fa fa-th-large" aria-hidden="true"></i>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+         <!-- lightd app categories -->
+         <div class="col-md-2">
+          <ul class="list-unstyled category-content fixed-category-position">
+            <li>
+              <a href="#Favourites">
+                <i class="fa fa-bookmark category-padding"></i> Favourites
+              </a>
+            </li>
+            <li>
+              <a href="#Internet">
+                <i class="fa fa-globe category-padding"></i> Internet
+              </a>
+            </li>
+            <li>
+              <a href="#Chat">
+                <i class="fa fa-commenting category-padding"></i> Chat
+              </a>
+            </li>
+            <li>
+              <a href="#Music">
+                <i class="fa  fa-music category-padding"></i> Music
+              </a>
+            </li>
+            <li>
+              <a href="#Video">
+                <i class="fa fa-film category-padding"></i> Video
+              </a>
+            </li>
+            <li>
+              <a href="#Graphics">
+                <i class="fa fa-image category-padding"></i> Graphics
+              </a>
+            </li>
+            <li>
+              <a href="#Games">
+                <i class="fa fa-gamepad category-padding"></i> Games
+              </a>
+            </li>
+            <li>
+              <a href="#Office">
+                <i class="fa fa-pie-chart category-padding"></i> Office
+              </a>
+            </li>
+            <li>
+              <a href="#Read">
+                <i class="fa fa-book category-padding"></i> Read
+              </a>
+            </li>
+            <li>
+              <a href="#Developer">
+                <i class="fa fa-code category-padding"></i> Developer
+              </a>
+            </li>
+            <li>
+              <a href="#System">
+                <i class="fa fa-desktop category-padding"></i> System
+              </a>
+            </li>
+            <li>
+              <a href="#Others">
+                <i class="fa fa-tags category-padding"></i> Others
+              </a>
+            </li>
+          </ul>
+         </div>
+         <!-- lightd list of apps -->
+         <div class="col-md-10">
+           <ul class="list-unstyled app-list-content" style="top:-75  px;padding-right:20px">
+             <li>
+                 Favourites
+                 <a class="anchor" name="Favourites"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Internet
+               <a class="anchor" name="Internet"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Chat
+               <a class="anchor" name="Chat"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Music
+               <a class="anchor" name="Music"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Video
+               <a class="anchor" name="Video"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Graphics
+               <a class="anchor" name="Graphics"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Games
+               <a class="anchor" name="Games"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Office
+               <a class="anchor" name="Office"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Read
+               <a class="anchor" name="Read"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Developer
+               <a class="anchor" name="Developer"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               System
+               <a class="anchor" name="System"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+
+
+                </ul>
+             </li>
+             <li>
+               Others
+               <a class="anchor" name="Others"></a>
+               <hr>
+               <!-- sample apps -->
+                <ul class="app-list-group">
+                  <li>
+                    <a class="btn btn-app">
+                      <i class="fa fa-repeat"></i> Repeat
+                    </a>
+                  </li>
+                </ul>
+             </li>
+           </ul>
+         </div>
+       </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  
+<!-- ./wrapper -->
+
+<!--
+https://ourcodeworld.com/articles/read/202/how-to-include-and-use-jquery-in-electron-framework
+If the require doesn't work, include first the jQuery file
+<script src="jquery-3.0.0.min.js"></script>-->
+<script>window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
+
+<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+<!-- jQuery UI 1.11.4 -->
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
